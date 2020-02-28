@@ -1,0 +1,13 @@
+@mixin font-family($family: "Helvetiva Neue", $font-weight: false)
+  font-family: $family
+  @if $font-weight
+    font-weight: $font-weight
+
+@mixin heading-font-family
+  +font-family($heading-font-family, $heading-font-weight)
+
+@mixin body-font-family
+  +font-family($body-font-family, $body-font-weight)
+
+@mixin monospaced-font-family
+  +font-family($monospaced-font-family, $monospaced-font-weight)

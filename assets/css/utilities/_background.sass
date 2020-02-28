@@ -1,0 +1,11 @@
+.background--transparent
+  background-color: transparent
+
+@each $color, $value in $all-colors
+  .background--#{$color}
+    +bg-variant($color)
+
+@if $enable-color-gradients
+  @each $color, $value in $all-colors
+    .background--gradient-#{$color}
+      +bg-gradient-variant($value, $base-body-color)

@@ -1,0 +1,38 @@
+.flex
+  +flex
+
+.flex__item
+  +flex-item
+
+.flex--reverse
+  @extend .flex
+  flex-direction: row-reverse
+
+.flex--reverse-column
+  @extend .flex
+  flex-direction: column-reverse
+
+@each $content, $value in $flex-contents
+  .flex--justify-#{$content}
+    @extend .flex
+    justify-content: $value
+
+  .flex--align-#{$content}
+    @extend .flex
+    align-items: $value
+
++flex-width-setup("flex-")
+
+@each $name in $grid-breakpoints
+  +at-breakpoint($name)
+    +flex-width-setup("flex-#{$name}-")
+
+@each $name in $grid-breakpoints
+  +at-breakpoint($name)
+    .flex--reverse-on-#{$name}
+      +flex
+      flex-direction: row-reverse
+
+    .flex--reverse-column-on-#{$name}
+      +flex
+      flex-direction: column-reverse
