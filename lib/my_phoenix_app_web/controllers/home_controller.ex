@@ -5,7 +5,7 @@ defmodule MyPhoenixAppWeb.HelloController do
     render(conn, "index.html")
   end
 
-  def show(conn, %{"messenger" => messenger}) do
-    render(conn, "show.html", messenger: messenger)
+  def show(conn, %{"id" => id}) do
+    render(conn, "show.html", messenger: id)
   end
 end
