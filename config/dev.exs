@@ -61,7 +61,7 @@ config :my_phoenix_app, MyPhoenixAppWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/my_phoenix_app_web/(live|views)/.*(ex)$",
-      ~r"lib/my_phoenix_app_web/templates/.*(eex)$"
+      ~r"lib/my_phoenix_app_web/templates/.*(eex|slim|slime)$"
     ]
   ]
 
