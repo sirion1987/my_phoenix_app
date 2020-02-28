@@ -11,17 +11,23 @@ html lang="en"
 
   body
     header
-      section.container
-        nav role="navigation"
-          ul
-            li
+      nav.nav role="navigation"
+        .nav__left
+          .nav__logo
+            a.phx-logo href="https://phoenixframework.org/"
+              img src="#{Routes.static_path(@conn, "/images/phoenix.png")}" alt="Phoenix Framework Logo"
+        .nav__right
+          .nav__menu
+            .nav__menu__item
               a href="https://hexdocs.pm/phoenix/overview.html">Get Started
-        a.phx-logo href="https://phoenixframework.org/"
-          img src="#{Routes.static_path(@conn, "/images/phoenix.png")}" alt="Phoenix Framework Logo"
+
 
     main.container role="main"
-      p.alert.alert-info role="alert" = get_flash(@conn, :info)
-      p.alert.alert-danger role="alert" = get_flash(@conn, :error)
+      p.alert.alert-info role="alert"
+        = get_flash(@conn, :info)
+
+      p.alert.alert-danger role="alert"
+        = get_flash(@conn, :error)
 
       = render @view_module, @view_template, assigns
 
