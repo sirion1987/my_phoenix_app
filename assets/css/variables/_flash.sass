@@ -1,6 +1,6 @@
-$enable-flash-colored:    false
+$enable-flash-colored: true
 
-$flash-colors: () !default
+$flash-colors: ("notice": "primary", "alert": "alert") !default
 
 // derived
-$notice-colors:    notice-colors($flash-colors, $bemo-colors)
+$notice-colors: notice-colors($flash-colors, $bemo-colors)

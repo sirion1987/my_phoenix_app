@@ -7,13 +7,14 @@ $white-color:    #ffffff
 $gray-color:     #6c757d
 $black-color:    #000000
 $red-color:      #ae0e0e
+$blue-color:     #007bff
 
 // Base map color
 $base-colors: () !default
 $base-colors: map-merge(("white": $white-color, "gray": $gray-color, "black": $black-color), $base-colors)
 
 // Insert the custom color schema inside the bemo-colors map
-$bemo-colors: () !default
+$bemo-colors: ("primary": $blue-color, "alert": $red-color) !default
 $bemo-colors: map-merge((), $bemo-colors)
 
 // derived

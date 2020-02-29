@@ -23,10 +23,10 @@ html lang="en"
 
 
     main.container role="main"
-      p.alert.alert-info role="alert"
+      p.flash--notice role="alert"
         = get_flash(@conn, :info)
 
-      p.alert.alert-danger role="alert"
+      p.flash--alert role="alert"
         = get_flash(@conn, :error)
 
       = render @view_module, @view_template, assigns
