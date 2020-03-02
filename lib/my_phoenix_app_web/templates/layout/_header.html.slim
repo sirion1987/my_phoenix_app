@@ -1,0 +1,14 @@
+header
+  nav.nav role="navigation"
+    .nav__left
+      .nav__logo
+        a.phx-logo href="https://phoenixframework.org/"
+          img src="#{Routes.static_path(@conn, "/images/phoenix.png")}" alt="Phoenix Framework Logo"
+    .nav__right
+      .nav__menu
+        .nav__menu__item
+          a href=Routes.page_path(@conn, :index) >Home
+        .nav__menu__item
+          a href=Routes.hello_path(@conn, :index) >Hello
+        .nav__menu__item
+          a href=Routes.session_path(@conn, :new) >Login
