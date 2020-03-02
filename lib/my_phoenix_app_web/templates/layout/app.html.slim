@@ -26,11 +26,7 @@ html lang="en"
               a href=Routes.session_path(@conn, :new) >Login
 
     main.container role="main"
-      p.flash--notice role="alert"
-        = get_flash(@conn, :info)
-
-      p.flash--alert role="alert"
-        = get_flash(@conn, :error)
+      = render "_flashes.html", conn: @conn
 
       = render @view_module, @view_template, assigns
 

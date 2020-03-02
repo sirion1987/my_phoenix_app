@@ -1,0 +1,5 @@
+= for key <- ["info", "error"] do
+  - flash = get_flash(@conn, String.to_atom(key))
+
+  = if flash do
+    p class="flash--#{key}" role="alert" = flash
