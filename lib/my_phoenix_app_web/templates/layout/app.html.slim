@@ -19,7 +19,9 @@ html lang="en"
         .nav__right
           .nav__menu
             .nav__menu__item
-              a href="https://hexdocs.pm/phoenix/overview.html">Get Started
+              a href=Routes.page_path(@conn, :index) >Home
+            .nav__menu__item
+              a href=Routes.hello_path(@conn, :index) >Hello
 
 
     main.container role="main"
