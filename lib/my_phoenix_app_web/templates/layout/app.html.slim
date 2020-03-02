@@ -10,10 +10,10 @@ html lang="en"
     = csrf_meta_tag()
 
   body
-    = render "_header.html", conn: @conn
+    = render MyPhoenixAppWeb.SharedView, "header.html", conn: @conn
 
     main.container role="main"
-      = render "_flashes.html", conn: @conn
+      = render MyPhoenixAppWeb.SharedView, "flashes.html", conn: @conn
 
       = render @view_module, @view_template, assigns
 
